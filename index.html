@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f5">
+  <title>For Pondati ♡</title>
+  <style>
+    :root {
+      --pink: #e8799e;
+      --deep: #9f4567;
+      --soft: #fff1f5;
+      --cream: #fffafc;
+      --ink: #61394b;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(180deg, #fff5f8 0%, #fffafd 48%, #ffeef4 100%);
+      overflow-x: hidden;
+    }
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 72px 22px 48px;
+      position: relative;
+      isolation: isolate;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width:  min(82vw, 420px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffdce8 0%, #ffeaf1 48%, transparent 72%);
+      z-index: -1;
+      filter: blur(4px);
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font: 11px/1.5 Arial, sans-serif;
+      color: #b86b87;
+    }
+    h1 {
+      margin: 12px 0;
+      color: var(--deep);
+      font-size: clamp(46px, 13vw, 76px);
+      font-weight: 500;
+      line-height: 1.02;
+    }
+    .hero p {
+      max-width: 310px;
+      margin: 14px auto 26px;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+    .heart-mark { color: var(--pink); font-size: 30px; }
+    .button {
+      display: inline-block;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 23px;
+      background: var(--pink);
+      color: white;
+      text-decoration: none;
+      font: 14px Arial, sans-serif;
+      box-shadow: 0 8px 22px #e8799e44;
+      cursor: pointer;
+    }
+    section {
+      width: min(100% - 36px, 560px);
+      margin: 0 auto;
+      padding: 58px 0;
+      text-align: center;
+    }
+    .section-label {
+      color: #bd7891;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font: 10px Arial, sans-serif;
+    }
+    h2 {
+      color: var(--deep);
+      font-size: clamp(30px, 8vw, 42px);
+      font-weight: 500;
+      margin: 12px 0 18px;
+    }
+    .letter {
+      background: #ffffffc9;
+      border: 1px solid #f8dce6;
+      border-radius: 22px;
+      padding: 26px 22px;
+      box-shadow: 0 12px 35px #b85d7a12;
+      font-size: 17px;
+      line-height: 1.8;
+      text-align: left;
+    }
+    .memory-placeholder {
+      border: 1px dashed #e8a8bd;
+      border-radius: 20px;
+      padding: 28px 18px;
+      background: #fff9fb;
+      color: #a56b80;
+      font: 13px/1.7 Arial, sans-serif;
+    }
+    .final-note {
+      padding-bottom: 90px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #b77b91;
+      font: 11px Arial, sans-serif;
+    }
+    .music-control {
+      position: fixed;
+      z-index: 5;
+      top: 14px;
+      right: 14px;
+      border: 1px solid #f1c5d4;
+      border-radius: 999px;
+      background: #fffafcE8;
+      color: var(--deep);
+      padding: 10px 13px;
+      font: 12px Arial, sans-serif;
+      box-shadow: 0 4px 14px #8e405411;
+      cursor: pointer;
+    }
+    .floating-heart {
+      position: fixed;
+      bottom: -30px;
+      z-index: -1;
+      color: #ed9ab5;
+      opacity: .58;
+      pointer-events: none;
+      animation: float-up linear forwards;
+    }
+    @keyframes float-up {
+      from { transform: translateY(0) rotate(0deg); opacity: 0; }
+      12% { opacity: .58; }
+      to { transform: translateY(-115vh) rotate(28deg); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Add your own royalty-free or personally licensed audio as "romantic-bgm.mp3"
+       in the same folder as this file. Music starts only after the visitor taps the button. -->
+  <audio id="bgm" loop>
+    <source src="romantic-bgm.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-control" id="musicButton" type="button">♫ Play music</button>
+
+  <main>
+    <header class="hero">
+      <div>
+        <div class="heart-mark">♡</div>
+        <div class="eyebrow">A little something, made for you</div>
+        <h1>For Pondati</h1>
+        <p>Some people make ordinary days feel special. You are that person to me.</p>
+        <a class="button" href="#letter">Open your little surprise</a>
+      </div>
+    </header>
+
+    <section id="letter">
+      <div class="section-label">A note from my heart</div>
+      <h2>Dear Pondati,</h2>
+      <div class="letter">
+        I made this little corner of the internet just for you. It may be a simple
+        page, but every part of it is here to remind you how special you are to me.
+        <br><br>
+        Thank you for being you. I hope this brings a smile to your face, today
+        and whenever you visit.
+        <br><br>
+        <span style="color:#bd6688">With love, ♡</span>
+        <br>
+        <em>[Add your name here]</em>
+      </div>
+    </section>
+
+    <section id="memories">
+      <div class="section-label">Little moments, big feelings</div>
+      <h2>Our memories</h2>
+      <div class="memory-placeholder">
+        Your favourite photos will go here.<br>
+        We can add a photo gallery in the next step.
+      </div>
+    </section>
+
+    <section class="final-note">
+      <div class="heart-mark">♥</div>
+      <h2>One more thing…</h2>
+      <p style="font-size:18px;line-height:1.7">
+        No matter how many pages I make, there will never be enough space
+        to fit all the reasons you are special to me.
+      </p>
+      <button class="button" id="surpriseButton" type="button">A tiny surprise</button>
+      <p id="surpriseMessage" aria-live="polite" hidden style="font-size:20px;color:#a34f70">
+        You are my favourite person. ♡
+      </p>
+    </section>
+  </main>
+
+  <footer>Made with love, just for Pondati ♡</footer>
+
+  <script>
+    const bgm = document.getElementById("bgm");
+    const musicButton = document.getElementById("musicButton");
+    musicButton.addEventListener("click", async () => {
+      if (bgm.paused) {
+        try {
+          await bgm.play();
+          musicButton.textContent = "♫ Pause music";
+        } catch {
+          musicButton.textContent = "Add romantic-bgm.mp3";
+        }
+      } else {
+        bgm.pause();
+        musicButton.textContent = "♫ Play music";
+      }
+    });
+
+    document.getElementById("surpriseButton").addEventListener("click", () => {
+      document.getElementById("surpriseMessage").hidden = false;
+      document.getElementById("surpriseButton").textContent = "♡";
+    });
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduceMotion) {
+      function makeHeart() {
+        const heart = document.createElement("span");
+        heart.className = "floating-heart";
+        heart.textContent = Math.random() > 0.5 ? "♡" : "♥";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (12 + Math.random() * 18) + "px";
+        heart.style.animationDuration = (7 + Math.random() * 6) + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 14000);
+      }
+      setInterval(makeHeart, 850);
+    }
+  </script>
+</body>
+</html>
